@@ -1,0 +1,23 @@
+import word 
+f = open("data.txt")
+
+v = f.read()
+
+primlist = []
+innerList = []
+
+y = v.split()
+
+for i in range(len(y)):
+    if y[i] not in primlist:
+        primlist.append(y[i])
+
+for b in range(len(primlist)):
+    u = []
+    if b + 1 < len(primlist):
+        s = primlist[b + 1]
+        u.append(s)
+        innerList.append(u)
+print(primlist)
+
+print(innerList)
